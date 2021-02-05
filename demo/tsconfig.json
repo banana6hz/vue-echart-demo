@@ -1,0 +1,27 @@
+//ts配置文件 https://www.tslang.cn/docs/handbook/tsconfig-json.html
+{
+  "compilerOptions": {
+		// 编译选项
+    "target": "esnext", // 编译输出目标ES版本
+    "module": "esnext", // 采用的模块系统
+    "moduleResolution": "node", // 如何处理模块
+    "importHelpers": true,
+    "jsx": "preserve",
+    "esModuleInterop": true,
+    "sourceMap": true, // 是否包含可以用于 debug 的 sourceMap
+    "baseUrl": "./", // 解析非相对模块名的基准目录
+    "strict": true, // 以严格模式解析
+    "paths": {
+      "@/*": ["src/*"],
+    },
+		"allowSyntheticDefaultImports": true, // 允许从没有设置默认导出的模块中默认导入
+  },
+  "include": [
+		// ts管理的文件
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "shims-vue.d.ts",
+	],
+	"exclude": ["node_modules"] // ts 排除的文件
+}
